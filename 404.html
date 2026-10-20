@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Doorsturen...</title>
+<script>
+/* /quizmore, /QUIZMORE, ... sturen door naar /QuizMore/ (rest van het adres in kleine letters). */
+(function(){
+  var m=location.pathname.match(/^\/quizmore(\/.*)?$/i);
+  location.replace(m?'/QuizMore'+(m[1]||'/').toLowerCase()+location.search+location.hash:'/QuizMore/');
+})();
+</script>
+</head>
+<body><p><a href="/QuizMore/">Naar QuizMore</a></p></body>
+</html>
